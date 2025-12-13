@@ -1,0 +1,8 @@
+services:
+  converter:
+    build: .
+    image: heavy-pandoc:latest
+    user: "${UID}:${GID}" 
+    volumes:
+      - .:/data
+    command: ["pandoc --help"]
