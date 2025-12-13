@@ -17,10 +17,7 @@ cn:
 		-V geometry:margin=2cm \
 		--number-sections"
 
-# ----------------------------------------------------------------
-# 英文转换 (Times / TeX Gyre Termes)
-# ----------------------------------------------------------------
-en:
+en-serif:
 	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
 		--pdf-engine=xelatex \
 		-V mainfont='TeX Gyre Termes' \
@@ -29,5 +26,5 @@ en:
 en-sans:
 	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
 		--pdf-engine=xelatex \
-		-V mainfont='TeX Gyre Heros' \
+		-V mainfont='Open Sans' \
 		-V geometry:margin=2cm"
