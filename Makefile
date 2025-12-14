@@ -20,6 +20,10 @@ clear-emoji:
 docker-sh:
 	$(DOCKER_RUN) /bin/bash
 
+# Optional Arguments:
+# --number-sections
+# -V mathfont='Noto Sans CJK SC' \
+
 cn:
 	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
 		--lua-filter=img_filter.lua \
@@ -30,8 +34,7 @@ cn:
 		-V sansfontoptions='BoldFont=Noto Sans CJK SC Bold' \
 		-V CJKmainfont='Noto Sans CJK SC' \
 		-V CJKoptions='BoldFont=Noto Sans CJK SC Bold' \
-		-V geometry:margin=2cm \
-		--number-sections"
+		-V geometry:margin=2cm"
 
 en-serif:
 	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
