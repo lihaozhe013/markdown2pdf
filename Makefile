@@ -1,4 +1,16 @@
-DOCKER_RUN := UID=$(UID) GID=$(GID) docker compose run --rm converter
+# Detect OS for compatibility
+ifeq ($(OS),Windows_NT)
+    # Windows (Git Bash, WSL, etc.)
+    # Docker Desktop handles permissions, so we use default IDs to avoid warnings
+	DOCKER_RUN := docker compose run --rm converter
+else
+    # Linux / macOS
+    UID := $(shell id -u)
+    GID := $(shell id -g)
+	DOCKER_RUN := UID=$(UID) GID=$(GID) docker compose run --rm converter
+endif
+
+
 
 default: cn
 
