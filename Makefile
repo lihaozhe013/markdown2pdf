@@ -10,6 +10,7 @@ shell:
 
 cn:
 	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
+		--lua-filter=img_filter.lua \
 		--pdf-engine=xelatex \
 		-V mainfont='Noto Sans CJK SC' \
 		-V sansfont='Noto Sans CJK SC' \
@@ -19,12 +20,14 @@ cn:
 
 en-serif:
 	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
+		--lua-filter=img_filter.lua \
 		--pdf-engine=xelatex \
 		-V mainfont='TeX Gyre Termes' \
 		-V geometry:margin=2cm"
 
 en-sans:
 	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
+		--lua-filter=img_filter.lua \
 		--pdf-engine=xelatex \
 		-V mainfont='Open Sans' \
 		-V geometry:margin=2cm"
