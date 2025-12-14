@@ -13,8 +13,11 @@ cn:
 		--lua-filter=img_filter.lua \
 		--pdf-engine=xelatex \
 		-V mainfont='Noto Sans CJK SC' \
+		-V mainfontoptions='BoldFont=Noto Sans CJK SC Bold' \
 		-V sansfont='Noto Sans CJK SC' \
+		-V sansfontoptions='BoldFont=Noto Sans CJK SC Bold' \
 		-V CJKmainfont='Noto Sans CJK SC' \
+		-V CJKoptions='BoldFont=Noto Sans CJK SC Bold' \
 		-V geometry:margin=2cm \
 		--number-sections"
 
