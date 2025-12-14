@@ -59,5 +59,5 @@ en-sans:
 	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
 		--lua-filter=img_filter.lua \
 		--pdf-engine=xelatex \
-		-V mainfont='Open Sans' \
+		-V mainfont='TeX Gyre Heros' \
 		-V geometry:margin=2cm"
