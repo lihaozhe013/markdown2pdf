@@ -2,10 +2,22 @@ DOCKER_RUN := UID=$(UID) GID=$(GID) docker compose run --rm converter
 
 default: cn
 
+docker-build:
+	docker compose up -d --build
+
+docker-start:
+	docker compose up -d
+
+docker-stop:
+	docker compose stop
+
+docker-down:
+	docker compose down
+
 clear-emoji:
 	python3 clear-emoji.py
 
-shell:
+docker-sh:
 	$(DOCKER_RUN) /bin/bash
 
 cn:
