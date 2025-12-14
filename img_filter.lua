@@ -17,12 +17,18 @@ function RawInline(el)
     -- 例子: style="zoom:50%;" -> 提取出 50
     local zoom = html:match('zoom:%s*(%d+)%%?')
 
+    -- 新增: 提取 style 中的 width (例如 style="width:500px")
+    local style_width = html:match('width:%s*([^;\'"]+)')
+
     if zoom then
       -- 关键点：Pandoc 只要收到 "50%" 这样的字符串属性
       -- 它在转 PDF 时，会自动将其换算为 width=0.5\textwidth
       attributes.width = zoom .. "%"
+    elseif style_width then
+      -- 如果检测到 style="width:..."，直接使用该宽度
+      attributes.width = style_width
     else
-      -- 3. 如果没有 zoom，尝试找找标准的 width 属性作为备选
+      -- 3. 如果没有 zoom 也没有 style width，尝试找找标准的 width 属性作为备选
       local width = html:match('width=["\']([^"\']+)["\']')
       if width then 
         attributes.width = width 
