@@ -36,7 +36,7 @@ docker-sh:
 # --number-sections
 # -V mathfont='Noto Sans CJK SC' \
 
-cn:
+cn-casual:
 	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
 		--lua-filter=img_filter.lua \
 		--pdf-engine=xelatex \
@@ -48,16 +48,22 @@ cn:
 		-V CJKoptions='BoldFont=Noto Sans CJK SC Bold' \
 		-V geometry:margin=2cm"
 
-en-serif:
-	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
+pdf-en-formal-serif:
+	$(DOCKER_RUN) "pandoc content.md styles/en-formal-serif.yaml -o content.pdf \
 		--lua-filter=img_filter.lua \
-		--pdf-engine=xelatex \
-		-V mainfont='TeX Gyre Termes' \
-		-V geometry:margin=2cm"
+		--pdf-engine=pdflatex"
 
-en-sans:
-	$(DOCKER_RUN) "pandoc content.md -o content.pdf \
+pdf-en-formal-sans:
+	$(DOCKER_RUN) "pandoc content.md styles/en-formal-sans.yaml -o content.pdf \
 		--lua-filter=img_filter.lua \
-		--pdf-engine=xelatex \
-		-V mainfont='TeX Gyre Heros' \
-		-V geometry:margin=2cm"
+		--pdf-engine=pdflatex"
+
+tex-en-formal-serif:
+	$(DOCKER_RUN) "pandoc content.md styles/en-formal-serif.yaml -o content_serif.tex \
+		--lua-filter=img_filter.lua \
+		--standalone"
+
+tex-en-formal-sans:
+	$(DOCKER_RUN) "pandoc content.md styles/en-formal-sans.yaml -o content_sans.tex \
+		--lua-filter=img_filter.lua \
+		--standalone"
