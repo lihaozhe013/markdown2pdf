@@ -1,0 +1,34 @@
+---
+title: "Template"
+author: ""
+date: ""
+titlepage: false
+fontfamily: opensans
+fontsize: 11pt
+geometry:
+  - margin=2cm
+indent: false
+parskip: 0.2cm
+toc: false
+numbersections: false
+colorlinks: true
+linkcolor: blue
+urlcolor: blue
+highlight-style: tango
+header-includes:
+  - |
+    \usepackage{titling}
+    \setlength{\droptitle}{-4em}
+    \pretitle{\begin{center}\Large\bfseries}
+    \posttitle{\end{center}\vskip 0.5em}
+    \preauthor{}
+    \postauthor{}
+    \predate{}
+    \postdate{}
+    \usepackage[T1]{fontenc}
+    \renewcommand{\familydefault}{\sfdefault}
+    \usepackage{sectsty}
+    \sectionfont{\bfseries\fontsize{18}{22}\selectfont}
+    \subsectionfont{\bfseries\fontsize{14}{17}\selectfont}
+    \subsubsectionfont{\bfseries\fontsize{12}{15}\selectfont}
+---
