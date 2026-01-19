@@ -26,7 +26,7 @@ header-includes:
     \predate{}
     \postdate{}
     \usepackage{sectsty}
-    \sectionfont{\normalfont\scshape\fontsize{14}{17}\selectfont}
-    \subsectionfont{\normalfont\fontsize{12}{15}\selectfont}
-    \subsubsectionfont{\normalfont\fontsize{11}{14}\selectfont}
+    \sectionfont{\bfseries\normalfont\scshape\fontsize{14}{17}\selectfont}
+    \subsectionfont{\bfseries\normalfont\fontsize{12}{15}\selectfont}
+    \subsubsectionfont{\bfseries\normalfont\fontsize{11}{14}\selectfont}
 ---

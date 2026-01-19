@@ -1,5 +1,6 @@
 services:
   converter:
+    container_name: template
     build: .
     image: heavy-pandoc:latest
     user: "${UID}:${GID}" 
