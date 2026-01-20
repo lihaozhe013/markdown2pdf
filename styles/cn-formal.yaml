@@ -15,17 +15,12 @@ colorlinks: true
 linkcolor: blue
 urlcolor: blue
 highlight-style: tango
-mainfont: "Noto Sans CJK SC"
-mainfontoptions:
-  - BoldFont=Noto Sans CJK SC Bold
-sansfont: "Noto Sans CJK SC"
-sansfontoptions:
-  - BoldFont=Noto Sans CJK SC Bold
 CJKmainfont: "Noto Sans CJK SC"
 CJKoptions:
   - BoldFont=Noto Sans CJK SC Bold
 header-includes:
   - |
+    \usepackage[default]{sourcesanspro}
     \usepackage{sectsty}
     \sectionfont{\normalfont\bfseries\fontsize{14}{17}\selectfont}
     \subsectionfont{\normalfont\bfseries\fontsize{12}{15}\selectfont}
