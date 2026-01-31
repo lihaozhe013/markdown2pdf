@@ -3,7 +3,7 @@ title: "Template"
 author: ""
 date: ""
 titlepage: false
-fontfamily: mathpazo
+fontfamily: times
 fontsize: 11pt
 geometry:
   - margin=2cm

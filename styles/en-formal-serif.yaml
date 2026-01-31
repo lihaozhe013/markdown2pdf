@@ -3,7 +3,7 @@ title: "Template"
 author: "Haozhe Li"
 date: "\\today"
 titlepage: true
-fontfamily: mathpazo
+fontfamily: times
 fontsize: 11pt
 geometry:
   - margin=2cm

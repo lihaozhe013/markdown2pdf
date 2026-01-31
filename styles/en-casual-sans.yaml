@@ -28,7 +28,7 @@ header-includes:
     \usepackage{sourcesanspro}
     \renewcommand{\familydefault}{\sfdefault}
     \usepackage{sectsty}
-    \sectionfont{\fontseries{sm}\fontsize{18}{22}\selectfont}
-    \subsectionfont{\fontseries{sm}\fontsize{14}{17}\selectfont}
-    \subsubsectionfont{\fontseries{sm}\fontsize{12}{15}\selectfont}
+    \sectionfont{\fontseries{eb}\fontsize{14}{17}\selectfont}
+    \subsectionfont{\fontseries{eb}\fontsize{12}{15}\selectfont}
+    \subsubsectionfont{\fontseries{eb}\fontsize{11}{14}\selectfont}
 ---
