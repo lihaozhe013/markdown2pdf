@@ -71,11 +71,11 @@ docker-sh:
 
 # Optional Arguments:
 # --number-sections
-# -V mathfont='Noto Sans CJK SC' \
+# -V mathfont='Noto Sans CJK SC'
+# --lua-filter=optional/typora_img_filter.lua
 
 pdf-cn-casual:
 	$(DOCKER_RUN) "pandoc content.md styles/cn-casual.yaml -o content.pdf \
-		--lua-filter=optional/typora_img_filter.lua \
 		--pdf-engine=xelatex"
 
 pdf-cn-formal:
@@ -84,12 +84,10 @@ pdf-cn-formal:
 
 pdf-en-casual-serif:
 	$(DOCKER_RUN) "pandoc content.md styles/en-casual-serif.yaml -o content.pdf \
-		--lua-filter=optional/typora_img_filter.lua \
 		--pdf-engine=pdflatex"
 
 pdf-en-casual-sans:
 	$(DOCKER_RUN) "pandoc content.md styles/en-casual-sans.yaml -o content.pdf \
-		--lua-filter=optional/typora_img_filter.lua \
 		--pdf-engine=pdflatex"
 
 pdf-en-formal-serif:
@@ -102,12 +100,10 @@ pdf-en-formal-sans:
 
 tex-en-casual-serif:
 	$(DOCKER_RUN) "pandoc content.md styles/en-casual-serif.yaml -o content_en_casual_serif.tex \
-		--lua-filter=optional/typora_img_filter.lua \
 		--standalone"
 
 tex-en-casual-sans:
 	$(DOCKER_RUN) "pandoc content.md styles/en-casual-sans.yaml -o content_en_casual_sans.tex \
-		--lua-filter=optional/typora_img_filter.lua \
 		--standalone"
 
 tex-en-formal-serif:
@@ -120,10 +116,8 @@ tex-en-formal-sans:
 
 tex-cn-casual:
 	$(DOCKER_RUN) "pandoc content.md styles/cn-casual.yaml -o content_casual.tex \
-		--lua-filter=optional/typora_img_filter.lua \
 		--standalone"
 
 tex-cn-formal:
 	$(DOCKER_RUN) "pandoc content.md styles/cn-formal.yaml -o content_formal.tex \
-		--lua-filter=optional/typora_img_filter.lua \
 		--standalone"
