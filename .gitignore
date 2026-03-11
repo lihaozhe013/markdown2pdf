@@ -3,3 +3,5 @@ assets/
 content.pdf
 content.md.bak
 .vscode/settings.json
+config.yaml
+*.pyc
