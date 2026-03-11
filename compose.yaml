@@ -1,9 +1,9 @@
 services:
   converter:
-    container_name: template
+    container_name: markdown2pdf
     build: .
-    image: heavy-pandoc:latest
+    image: markdown2pdf:latest
     user: "${UID}:${GID}" 
     volumes:
-      - .:/data
+      - .:/workspace
     command: ["pandoc --help"]

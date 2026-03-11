@@ -1,6 +1,5 @@
 import emoji
 import os
-import shutil
 
 def remove_emojis_from_file(filename):
     if not os.path.exists(filename):
@@ -8,8 +7,6 @@ def remove_emojis_from_file(filename):
         return
 
     try:
-        backup_name = f"{filename}.bak"
-        shutil.copy(filename, backup_name)
         with open(filename, 'r', encoding='utf-8') as f:
             content = f.read()
 

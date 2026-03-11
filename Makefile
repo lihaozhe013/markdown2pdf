@@ -6,4 +6,3 @@ run:
 clean:
 	rm -rf *.pdf
 	rm -rf ./assets/
-	rm -rf */.bak
