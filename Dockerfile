@@ -6,9 +6,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN ARCH=$(dpkg --print-architecture) && \
-    wget "https://github.com/jgm/pandoc/releases/download/3.9/pandoc-3.9-1-amd64.deb" && \
-    dpkg -i pandoc-3.9-1-amd64.deb && \
-    rm pandoc-3.9-1-amd64.deb
+    wget "https://github.com/jgm/pandoc/releases/download/3.9/pandoc-3.9-1-${ARCH}.deb" && \
+    dpkg -i "pandoc-3.9-1-${ARCH}.deb" && \
+    rm "pandoc-3.9-1-${ARCH}.deb"
 
 RUN pandoc --version
 WORKDIR /workspace
