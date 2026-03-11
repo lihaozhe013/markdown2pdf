@@ -10,8 +10,9 @@ toc: true
 toc-depth: 2
 numbersections: true
 colorlinks: true
-linkcolor: blue
-urlcolor: blue
+linkcolor: "#2B6CB0"
+urlcolor: "#2B6CB0"
+toccolor: black
 highlight-style: tango
 header-includes:
   - |

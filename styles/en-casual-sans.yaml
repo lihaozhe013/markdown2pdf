@@ -9,8 +9,9 @@ parskip: 0.2cm
 toc: false
 numbersections: false
 colorlinks: true
-linkcolor: blue
-urlcolor: blue
+linkcolor: "#2B6CB0"
+urlcolor: "#2B6CB0"
+toccolor: black
 highlight-style: tango
 header-includes:
   - |
