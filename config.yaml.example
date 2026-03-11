@@ -1,0 +1,17 @@
+title: Title
+author: Author
+
+file_name: content.md
+
+# style options:
+  # cn-casual, cn-formal
+  # en-casual-sans, en-casual-serif
+  # en-formal-sans, en-formal-serif
+style: en-formal-serif
+
+output_type: pdf
+
+# engine options:
+  # for pdf, use `pdflatex` or `xelatex`
+  # for tex, use `standalone`
+engine: pdflatex
