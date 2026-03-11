@@ -1,7 +1,7 @@
-content.md
-assets/
-content.pdf
-content.md.bak
+*.md
+/assets/
+*.pdf
+*.md.bak
 .vscode/settings.json
 config.yaml
 *.pyc
