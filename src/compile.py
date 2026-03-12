@@ -8,8 +8,8 @@ config = config_class(base_dir)
 
 pandoc_args = [
     'pandoc',
-    str(config.file_path.relative_to(base_dir)),
-    str(config.style_path.relative_to(base_dir)),
+    config.file_path.relative_to(base_dir).as_posix(),
+    config.style_path.relative_to(base_dir).as_posix(),
     '-o',
     config.output_name,
     config.output_engine,
