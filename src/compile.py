@@ -1,9 +1,9 @@
 from pathlib import Path
 import shlex
-from src.utils import config_class, run_cmd
-from src.clear_emoji import remove_emojis_from_file
+from utils import config_class, run_cmd
+from clear_emoji import remove_emojis_from_file
 
-base_dir = Path(__file__).parent.resolve()
+base_dir = Path(__file__).parent.resolve() / '..'
 config = config_class(base_dir)
 
 pandoc_args = [
