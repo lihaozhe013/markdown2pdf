@@ -20,12 +20,14 @@ header-includes:
     \setlength{\droptitle}{-4em}
     \pretitle{\begin{center}\Large\bfseries}
     \posttitle{\end{center}\vskip 0.5em}
-    \preauthor{}
-    \postauthor{}
-    \predate{}
-    \postdate{}
+    \usepackage{graphicx}
     \usepackage{sectsty}
-    \sectionfont{\bfseries\normalfont\scshape\fontsize{14}{17}\selectfont}
-    \subsectionfont{\bfseries\normalfont\fontsize{12}{15}\selectfont}
-    \subsubsectionfont{\bfseries\normalfont\fontsize{11}{14}\selectfont}
+    \renewcommand{\arraystretch}{1.2}
+    \sectionfont{\normalfont\bfseries\scshape\fontsize{14}{17}\selectfont}
+    \subsectionfont{\normalfont\bfseries\fontsize{12}{15}\selectfont}
+    \subsubsectionfont{\normalfont\bfseries\fontsize{11}{14}\selectfont}
+    \let\oldmaketitle\maketitle
+    \renewcommand{\maketitle}{\oldmaketitle\thispagestyle{empty}\newpage}
+    \let\oldtableofcontents\tableofcontents
+    \renewcommand{\tableofcontents}{\oldtableofcontents\newpage}
 ---

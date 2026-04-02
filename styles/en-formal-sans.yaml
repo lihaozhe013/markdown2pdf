@@ -19,7 +19,9 @@ header-includes:
     \usepackage[T1]{fontenc}
     \usepackage{sourcesanspro}
     \renewcommand{\familydefault}{\sfdefault}
+    \usepackage{graphicx}
     \usepackage{sectsty}
+    \renewcommand{\arraystretch}{1.2}
     \sectionfont{\fontseries{eb}\fontsize{14}{17}\selectfont}
     \subsectionfont{\fontseries{eb}\fontsize{12}{15}\selectfont}
     \subsubsectionfont{\fontseries{eb}\fontsize{11}{14}\selectfont}

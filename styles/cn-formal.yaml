@@ -21,6 +21,8 @@ header-includes:
   - |
     \usepackage[default]{sourcesanspro}
     \usepackage{sectsty}
+    \usepackage{graphicx}
+    \renewcommand{\arraystretch}{1.2}
     \sectionfont{\normalfont\bfseries\fontsize{14}{17}\selectfont}
     \subsectionfont{\normalfont\bfseries\fontsize{12}{15}\selectfont}
     \subsubsectionfont{\normalfont\fontsize{11}{14}\selectfont}

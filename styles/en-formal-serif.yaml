@@ -17,7 +17,9 @@ toccolor: black
 highlight-style: tango
 header-includes:
   - |
+    \usepackage{graphicx}
     \usepackage{sectsty}
+    \renewcommand{\arraystretch}{1.2}
     \sectionfont{\normalfont\bfseries\scshape\fontsize{14}{17}\selectfont}
     \subsectionfont{\normalfont\bfseries\fontsize{12}{15}\selectfont}
     \subsubsectionfont{\normalfont\bfseries\fontsize{11}{14}\selectfont}
