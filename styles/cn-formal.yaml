@@ -14,12 +14,12 @@ linkcolor: "#2B6CB0"
 urlcolor: "#2B6CB0"
 toccolor: black
 highlight-style: tango
+mainfont: "Noto Sans CJK SC"
 CJKmainfont: "Noto Sans CJK SC"
 CJKoptions:
   - BoldFont=Noto Sans CJK SC Bold
 header-includes:
   - |
-    \usepackage[default]{sourcesanspro}
     \usepackage{sectsty}
     \usepackage{graphicx}
     \renewcommand{\arraystretch}{1.2}
