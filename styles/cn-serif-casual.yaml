@@ -1,0 +1,28 @@
+---
+date: ""
+titlepage: false
+fontsize: 11pt
+geometry:
+  - margin=2cm
+indent: false
+parskip: 0.2cm
+toc: false
+numbersections: false
+colorlinks: true
+linkcolor: "#2B6CB0"
+urlcolor: "#2B6CB0"
+toccolor: black
+highlight-style: tango
+mainfont: "Noto Serif CJK SC"
+CJKmainfont: "Noto Serif CJK SC"
+CJKoptions:
+  - BoldFont=Noto Serif CJK SC Bold
+header-includes:
+  - |
+    \usepackage{titling}
+    \setlength{\droptitle}{-4em}
+    \pretitle{\begin{center}\Large\bfseries}
+    \posttitle{\end{center}\vskip 0.5em}
+    \usepackage{graphicx}
+    \renewcommand{\arraystretch}{1.2}
+---
