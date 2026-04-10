@@ -1,0 +1,40 @@
+{
+  "config": {
+    "default": true, // Enable all rules by default, then override individually
+
+    // ==========================================
+    // 1. Core Typography (Strict Formatting)
+    // ==========================================
+    "MD003": { "style": "atx" },         // Enforce '#' (atx) style for headers, disable '===' (Setext) style
+    "MD004": { "style": "dash" },        // Unify unordered lists to use '-', keeping the codebase clean
+    "MD029": { "style": "one" },         // Unify ordered lists to use '1.', making it easier to insert items without renumbering
+    "MD024": { "siblings_only": true },  // Allow duplicate subheadings under different sections (e.g., multiple "Summary" headers)
+    "MD025": false,                      // Disable single H1 requirement (Useful if using YAML Front Matter for titles)
+    "MD045": false,                      // Disable mandatory alt text for images
+    "MD036": false,
+
+    // ==========================================
+    // 2. Table & Math Friendly Configuration (Important)
+    // ==========================================
+    "MD013": false, // [Must Disable] Line length limit. Strict 80-char limits break complex tables and LaTeX math blocks.
+    "MD033": false, // [Recommended Disable] Allow inline HTML. Useful for complex tables (e.g., merging cells) or specific math renderers.
+    "MD040": true,  // Enforce language specification for fenced code blocks (e.g., ```python), crucial for Pandoc/LaTeX rendering.
+    "MD051": false, // Disable internal link validation. Prevents false positives with wiki-links or custom math anchors.
+
+    // ==========================================
+    // 3. Spacing & Line Breaks
+    // ==========================================
+    "MD009": { 
+      "br_spaces": 2, // Allow 2 trailing spaces for Markdown hard line breaks
+      "strict": false // Less strict on specific paragraph types
+    },
+    "MD010": false, // Allow hard tabs (Useful for manually aligning complex math or tables)
+    "MD012": false, // Allow multiple consecutive blank lines. Enhances source readability around large tables or math blocks.
+    "MD047": true   // Require a single trailing newline at the end of the file (POSIX standard, Git-friendly)
+  },
+  
+  // Directories to ignore
+  "ignores": [
+    ".git"
+  ]
+}

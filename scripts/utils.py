@@ -6,6 +6,7 @@ import os
 import platform
 from pathlib import Path
 
+
 class config_class:
     def __init__(self, base_dir):
         self.full_config = self.load_config(base_dir / 'config.yaml')
@@ -28,11 +29,11 @@ class config_class:
             self.output_name = tex_name
             self.output_engine = '--standalone'
         else:
-            print(f'Error: Unknown output_type: {self.full_config['output_type']}')
+            print(f'Error: Unknown output_type: {self.full_config["output_type"]}')
 
         self.style_name = self.full_config['style']
         self.style_path = base_dir / 'styles' / f'{self.style_name}.yaml'
-        
+
         self.author = self.full_config['author']
         self.title = self.full_config['title']
 
@@ -54,6 +55,7 @@ def run_cmd(work_dir, command):
 
     print(f'Running Command: {shlex.join(str(arg) for arg in command)}')
     subprocess.run(command, cwd=work_dir, env=env, check=True)
+
 
 def get_filenames_without_extension(directory_path):
     path = Path(directory_path)

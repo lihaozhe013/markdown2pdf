@@ -1,7 +1,10 @@
-*.md
-/assets/
+config.yaml
+
+.venv/
+.DS_Store
 *.pdf
 *.md.bak
-.vscode/settings.json
-config.yaml
 *.pyc
+__pycache__/
+*.py[codz]
+*$py.class

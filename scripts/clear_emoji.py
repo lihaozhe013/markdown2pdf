@@ -3,7 +3,7 @@ import os
 
 def remove_emojis_from_file(filename):
     if not os.path.exists(filename):
-        print(f"Cannot find {filename}")
+        print(f'Cannot find {filename}')
         return
 
     try:
@@ -15,11 +15,12 @@ def remove_emojis_from_file(filename):
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(clean_content)
 
-        print(f"Succeed!")
+        print(f'Succeed!')
 
     except Exception as e:
-        print(f"Error: {e}")
+        print(f'Error: {e}')
 
-if __name__ == "__main__":
-    target_file = 'content.md'
+
+if __name__ == '__main__':
+    target_file = 'path_to_your_file.md'
     remove_emojis_from_file(target_file)

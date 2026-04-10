@@ -1,11 +1,14 @@
-default: dev
+default: run
 
 run:
-	uv run src/compile.py
+	uv run scripts/compile.py
 
 dev:
-	uv run main.py
+	uv run scripts/dev.py
 
 clean:
 	rm -rf *.pdf
 	rm -rf ./assets/
+
+format:
+	markdownlint-cli2 "**/*.md" --fix

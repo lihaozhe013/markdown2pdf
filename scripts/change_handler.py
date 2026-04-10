@@ -1,7 +1,8 @@
 import time
-from src.utils import run_cmd
+from utils import run_cmd
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+
 
 class MarkdownChangeHandler(FileSystemEventHandler):
     def __init__(self, base_dir, command_to_run):
@@ -12,23 +13,24 @@ class MarkdownChangeHandler(FileSystemEventHandler):
         # 1. Ignore directory modifications
         # 2. Check if the file path ends with .md (case-insensitive)
         if not event.is_directory and event.src_path.lower().endswith('.md'):
-            print(f"\n[Change Detected] Markdown file modified: {event.src_path}")
-            print(f"[Executing Command] Running: {self.command_to_run}")
-            
+            print(f'\n[Change Detected] Markdown file modified: {event.src_path}')
+            print(f'[Executing Command] Running: {self.command_to_run}')
+
             # Execute the shell command
             run_cmd(self.base_dir, self.command_to_run)
+
 
 def start_watching(path_to_watch, command):
     # Initialize the event handler and observer
     event_handler = MarkdownChangeHandler(command)
     observer = Observer()
-    
+
     # recursive=True allows monitoring within subdirectories
     observer.schedule(event_handler, path_to_watch, recursive=True)
     observer.start()
-    
+
     print(f"👀 Now monitoring all .md files in directory: '{path_to_watch}'")
-    print(f"💡 Press Ctrl+C to stop monitoring...")
+    print(f'💡 Press Ctrl+C to stop monitoring...')
 
     try:
         # Keep the main thread alive
@@ -36,7 +38,7 @@ def start_watching(path_to_watch, command):
             time.sleep(1)
     except KeyboardInterrupt:
         observer.stop()
-        print("\nMonitoring stopped.")
-        
+        print('\nMonitoring stopped.')
+
     # Wait until the thread terminates before exiting
     observer.join()

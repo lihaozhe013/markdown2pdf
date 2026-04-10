@@ -13,22 +13,19 @@ pandoc_args = [
     '-o',
     config.output_name,
     config.output_engine,
-    '-M', f'title={config.title}',   
-    '-M', f'author={config.author}',
+    '-M',
+    f'title={config.title}',
+    '-M',
+    f'author={config.author}',
 ]
 
-pandoc_cmd = [
-    'docker',
-    'compose',
-    'run',
-    '--rm',
-    'converter',
-    shlex.join(pandoc_args)
-]
+pandoc_cmd = ['docker', 'compose', 'run', '--rm', 'converter', shlex.join(pandoc_args)]
+
 
 def main():
     remove_emojis_from_file(config.file_path)
     run_cmd(base_dir, pandoc_cmd)
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()
