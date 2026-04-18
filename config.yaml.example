@@ -4,7 +4,8 @@ author: Author
 file_name: content.md
 
 # style options:
-  # cn-casual, cn-formal
+  # cn-casual-sans, cn-casual-serif
+  # cn-formal-sans, cn-formal-serif
   # en-casual-sans, en-casual-serif
   # en-formal-sans, en-formal-serif
 style: en-formal-serif
