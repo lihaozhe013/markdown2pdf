@@ -20,6 +20,7 @@
     "MD033": false, // [Recommended Disable] Allow inline HTML. Useful for complex tables (e.g., merging cells) or specific math renderers.
     "MD040": true,  // Enforce language specification for fenced code blocks (e.g., ```python), crucial for Pandoc/LaTeX rendering.
     "MD051": false, // Disable internal link validation. Prevents false positives with wiki-links or custom math anchors.
+    "MD060": false,
 
     // ==========================================
     // 3. Spacing & Line Breaks
