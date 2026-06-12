@@ -9,8 +9,8 @@ parskip: 0.2cm
 toc: false
 numbersections: false
 colorlinks: true
-linkcolor: "#2B6CB0"
-urlcolor: "#2B6CB0"
+linkcolor: NavyBlue
+urlcolor: NavyBlue
 toccolor: black
 highlight-style: tango
 mainfont: "Noto Sans CJK SC"

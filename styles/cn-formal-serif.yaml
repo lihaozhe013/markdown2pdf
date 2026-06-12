@@ -10,8 +10,8 @@ toc: true
 toc-depth: 2
 numbersections: true
 colorlinks: true
-linkcolor: "#2B6CB0"
-urlcolor: "#2B6CB0"
+linkcolor: NavyBlue
+urlcolor: NavyBlue
 toccolor: black
 highlight-style: tango
 mainfont: "Noto Serif CJK SC"
