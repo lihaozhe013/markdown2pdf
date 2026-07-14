@@ -17,6 +17,8 @@ mainfont: 'Noto Sans CJK SC'
 CJKmainfont: 'Noto Sans CJK SC'
 CJKoptions:
   - BoldFont=Noto Sans CJK SC Bold
+monofont: 'Noto Sans Mono'
+CJKmonofont: 'Noto Sans Mono CJK SC'
 header-includes:
   - |
     \usepackage{titling}

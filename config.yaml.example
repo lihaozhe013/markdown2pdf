@@ -15,4 +15,4 @@ output_type: pdf
 # engine options:
   # for pdf, use `pdflatex` or `xelatex`
   # for tex, use `standalone`
-engine: pdflatex
+engine: xelatex

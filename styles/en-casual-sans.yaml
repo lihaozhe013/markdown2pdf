@@ -2,6 +2,7 @@
 date: ''
 titlepage: false
 fontsize: 11pt
+monofont: 'Noto Sans Mono'
 geometry:
   - margin=2cm
 indent: false

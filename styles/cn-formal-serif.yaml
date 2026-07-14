@@ -18,6 +18,8 @@ mainfont: 'Noto Serif CJK SC'
 CJKmainfont: 'Noto Serif CJK SC'
 CJKoptions:
   - BoldFont=Noto Serif CJK SC Bold
+monofont: 'Noto Sans Mono'
+CJKmonofont: 'Noto Sans Mono CJK SC'
 header-includes:
   - |
     \usepackage{sectsty}

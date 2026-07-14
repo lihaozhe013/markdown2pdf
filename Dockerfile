@@ -3,12 +3,17 @@ RUN apt-get update && apt-get install -y \
     wget \
     fonts-noto-cjk \
     fonts-noto-cjk-extra \
+    fonts-noto \
     && rm -rf /var/lib/apt/lists/*
 
 RUN ARCH=$(dpkg --print-architecture) && \
     wget "https://github.com/jgm/pandoc/releases/download/3.9/pandoc-3.9-1-${ARCH}.deb" && \
     dpkg -i "pandoc-3.9-1-${ARCH}.deb" && \
     rm "pandoc-3.9-1-${ARCH}.deb"
+
+RUN fc-cache -fv && \
+    mkdir -p /var/cache/fontconfig /.cache/fontconfig /.fontconfig && \
+    chmod -R 777 /var/cache/fontconfig /.cache/fontconfig /.fontconfig
 
 RUN pandoc --version
 WORKDIR /workspace
