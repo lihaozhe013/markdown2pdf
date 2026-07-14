@@ -14,8 +14,8 @@ linkcolor: NavyBlue
 urlcolor: NavyBlue
 toccolor: black
 highlight-style: tango
-mainfont: "Noto Sans CJK SC"
-CJKmainfont: "Noto Sans CJK SC"
+mainfont: 'Noto Sans CJK SC'
+CJKmainfont: 'Noto Sans CJK SC'
 CJKoptions:
   - BoldFont=Noto Sans CJK SC Bold
 header-includes:

@@ -1,5 +1,5 @@
 ---
-date: ""
+date: ''
 titlepage: false
 fontsize: 11pt
 geometry:
@@ -13,8 +13,8 @@ linkcolor: NavyBlue
 urlcolor: NavyBlue
 toccolor: black
 highlight-style: tango
-mainfont: "Noto Serif CJK SC"
-CJKmainfont: "Noto Serif CJK SC"
+mainfont: 'Noto Serif CJK SC'
+CJKmainfont: 'Noto Serif CJK SC'
 CJKoptions:
   - BoldFont=Noto Serif CJK SC Bold
 header-includes:

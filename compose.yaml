@@ -3,7 +3,7 @@ services:
     container_name: markdown2pdf
     build: .
     image: markdown2pdf:latest
-    user: "${UID}:${GID}" 
+    user: '${UID}:${GID}'
     volumes:
       - .:/workspace
-    command: ["pandoc --help"]
+    command: ['pandoc --help']

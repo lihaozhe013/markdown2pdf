@@ -11,4 +11,7 @@ clean:
 	rm -rf ./assets/
 
 format:
-	markdownlint-cli2 "**/*.md" --fix
+	prettier . --write
+
+# format:
+# 	markdownlint-cli2 "**/*.md" --fix
